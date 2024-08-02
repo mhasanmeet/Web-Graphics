@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Graphics</title>
+</head>
+<body>
+    
+    <canvas id="rectangle" width="200" height="100" style="border:1px solid #000000;"></canvas>
+    <canvas id="circle" width="200" height="100" style="border:1px solid #000000;"></canvas>
+
+
+    <script>
+        // draw a line
+        let rtg = document.getElementById("rectangle");
+        let ctx = rtg.getContext("2d");
+        ctx.fillStyle = "green";
+        ctx.fillRect(0, 0, 400, 200);
+        
+        ctx.moveTo(0, 0);
+        ctx.lineTo(400, 200);
+        ctx.stroke();
+
+
+        // draw a circle
+        let circle = document.getElementById("circle");
+        let ctx2 = circle.getContext("2d");
+        ctx2.beginPath();
+        ctx2.arc(95, 50, 40, 0, 2 * Math.PI);
+        ctx2.stroke();
+    </script>
+
+</body>
+</html>
